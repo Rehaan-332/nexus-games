@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nexus | Directory</title>
+    <style>
+        body { background-color: #000; color: #fff; font-family: 'Arial Black', sans-serif; margin: 0; text-align: center; }
+        header { background: #111; padding: 20px; border-bottom: 4px solid #ff0000; }
+        .logo { color: #ff0000;a font-size: 30px; text-transform: uppercase; text-decoration: none; }
+        nav { margin: 15px 0; }
+        nav a { color: white; text-decoration: none; margin: 0 15px; font-size: 14px; cursor: pointer; }
+        .grid { display: flex; justify-content: center; flex-wrap: wrap; padding: 40px; }
+        .module-card { width: 280px; margin: 15px; background: #111; border-radius: 10px; border-left: 10px solid #ff0000; transition: 0.3s; }
+        .module-card:hover { transform: scale(1.05); background: #1a1a1a; box-shadow: 0 0 15px rgba(255,0,0,0.2); }
+        .header { padding: 20px 10px; font-weight: bold; font-size: 18px; color: #ff0000; }
+        .info { font-family: Arial, sans-serif; color: #888; font-size: 12px; margin-bottom: 15px; line-height: 1.5; }
+        .play-btn { display: block; padding: 12px; background: #ff0000; color: white; font-weight: bold; text-transform: uppercase; font-size: 13px; text-decoration: none; }
+        .locked-btn { display: block; padding: 12px; background: #222; color: #555; text-decoration: none; cursor: not-allowed; }
+    </style>
+</head>
+<script>
+    window.history.replaceState(null, "", "https://google.com");
+    function checkAccess(destination) {
+        var pass = prompt("ENTER AUTHORIZATION CODE:");
+        if (pass === "simplylovely") { window.location.replace(destination); } 
+        else { window.location.replace("locked-out.html"); }
+    }
+</script>
+<body>
+   <header>
+    <div class="logo">NEXUS SYSTEMS</div>
+    <nav>
+        <a onclick="window.location.replace('index.html')">HOME</a>
+        <a onclick="checkAccess('locked.html')">DIRECTORY</a>
+    </nav>
+</header>
+    <h1 style="margin-top:40px;">SYSTEM DIRECTORY</h1>
+    <div class="grid">
+        <div class="module-card"><div class="header">MODULE_01</div><div class="info">Xylora</div><a href="https://shoolikedimnatoqourus.aiq-test.ru/" class="play-btn">Launch lvl.lol</a></div>
+        <div class="module-card"><div class="header">MODULE_02</div><div class="info">Petezah</div><a href="tinkercad.com" class="play-btn">Utopia</a></div>
+        <div class="module-card"><div class="header">MODULE_03</div><div class="info">Proxy Tunnel</div><a href="" class="play-btn">LOCKED</a></div>
+        <div class="module-card"><div class="header">MODULE_04</div><div class="info">Status: Encrypted</div><a href="#" class="locked-btn">LOCKED</a></div>
+    </div>
+</body>
+</html>
