@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nexus games | Home</title>
+    <style>
+        body { background-color: #000; color: #fff; font-family: 'Arial Black', sans-serif; margin: 0; text-align: center; }
+        header { background: #111; padding: 20px; border-bottom: 4px solid #ff0000; }
+        .logo { color: #ff0000; font-size: 35px; letter-spacing: 2px; text-transform: uppercase; }
+        nav { margin: 15px 0; }
+        nav a { color: white; text-decoration: none; margin: 0 15px; font-size: 14px; cursor: pointer; }
+        nav a:hover { color: #ff0000; }
+        .hero { padding: 80px 20px; background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)), url('https://unsplash.com'); background-size: cover; }
+        .description-box { max-width: 800px; margin: 40px auto; padding: 30px; background: #111; border-left: 5px solid #ff0000; text-align: left; line-height: 1.6; }
+        .dev-section { background: linear-gradient(145deg, #111, #ff000011); border-left: 5px solid #ff0000; }
+        .credits-section { background: #0a0a0a; border-left: 5px solid #ff0000; }
+        .description-box h2 { color: #ff0000; margin-top: 0; letter-spacing: 2px; }
+        .description-box p { font-family: Arial, sans-serif; color: #ccc; font-size: 15px; }
+        .btn-main { background: #ff0000; color: #fff; padding: 15px 40px; text-decoration: none; font-weight: bold; border-radius: 4px; display: inline-block; margin-top: 20px; text-transform: uppercase; cursor: pointer; }
+        .garage-btn { display: inline-block; background-color: #222; color: #fff; padding: 10px 20px; text-decoration: none; border: 2px solid #ff0000; border-radius: 4px; font-size: 12px; }
+    </style>
+    <script>
+        window.history.replaceState(null, "", "https://google.com");
+        function checkAccess(destination) {
+            var pass = prompt("ENTER AUTHORIZATION CODE:");
+            if (pass === "simplylovely") { window.location.replace(destination); } 
+            else { window.location.replace("locked-out.html"); }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo">NEXUS GAMES</div>
+        <nav>
+            <a onclick="window.location.replace('index.html')">HOME</a>
+            <a onclick="checkAccess('locked.html')">DIRECTORY</a>
+        </nav>
+        <a href="https://google.com" class="garage-btn">BACK TO CLASSROOM</a>
+    </header>
+    
+    <div class="hero">
+        <h1>SECURE TERMINAL</h1>
+        <p>Advanced Multi-Genre Technical Interface.</p>
+        <a onclick="checkAccess('locked.html')" class="btn-main">authorize access</a>
+    </div>
+
+    <!-- ABOUT ME SECTION -->
+    <div class="description-box dev-section">
+        <h2>ABOUT THE DEVELOPER: REHAAN</h2>
+        <p>I am a developer driven by technical precision and the laws of the natural world. My passion for <strong>Science</strong> inspires how I build—searching for logic, efficiency, and the "why" behind every line of code.</p>
+        <p>When I'm not in the lab or at the keyboard, I'm following the high-speed world of <strong>Formula 1</strong>. I appreciate the perfect intersection of aerodynamics, engineering, and split-second strategy. I bring that same "Simply Lovely" energy to the Nexus. Welcome to the grid.</p>
+    </div>
+
+    <!-- SYSTEM INFRASTRUCTURE & CREDITS SECTION -->
+    <div class="description-box credits-section">
+        <h2>SYSTEM INFRASTRUCTURE & CREDITS</h2>
+        <p>Building a high-performance terminal requires a dedicated crew. Special recognition goes to the following for their assistance in link acquisition and system testing:</p>
+        <p><strong>Zain Ali</strong> — For link procurement and technical introduction to the development environment.</p>
+        <p><strong>Jayden Wesley</strong> — For critical resources and link verification.</p>
+        <p><strong>Emily Roush</strong> — For giving links.</p>
+    </div>
+
+    <footer style="padding:60px; color:#444; font-size:11px;">&copy; 2026 Nexus Systems. Built on CodeHS.</footer>
+</body>
+</html>
